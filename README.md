@@ -1,71 +1,138 @@
 # 🎓 Advanced Java Laboratory & Project
 
-Welcome to the **Advanced Java Programming** practical laboratory repository. This repository contains all academic lab programs organized with clear, meaningful folder names, along with the complete Java project (**ShopSphere**).
+Welcome to the **Advanced Java Programming** practical laboratory repository. This repository contains all academic lab programs organized with clear, meaningful folder names, along with the complete enterprise Java project (**ShopSphere**).
 
 ---
 
-## 📁 Repository Contents
+## 📌 Repository Overview & Contents
 
-| Folder Name | Topic / Description | Key Files Included |
+This repository is organized to showcase practical implementations across core enterprise Java technologies:
+
+| Folder Name | Topic / Description | Key Technologies & Files |
 | :--- | :--- | :--- |
-| 📁 [`Student-Registration-Form-Swing`](./Student-Registration-Form-Swing) | Student Registration Form using Java Swing GUI | `StudentRegistration.java` |
-| 📁 [`Basic-WebApps-Tomcat`](./Basic-WebApps-Tomcat) | Basic Web Application for Apache Tomcat | `index.html` |
-| 📁 [`JdbcProject`](./JdbcProject) | Java Database Connectivity (JDBC) with MySQL | `src/`, `lib/mysql-connector-j.jar` |
-| 📁 [`Server-and-Client-Socket`](./Server-and-Client-Socket) | TCP Socket Programming (Client & Server) | `Server.java`, `Client.java` |
-| 📁 [`RMI`](./RMI) | Remote Method Invocation (Java RMI) | `MyInterface.java`, `MyRemote.java`, `Server.java`, `Client.java` |
-| 📁 [`MVC-Calculator`](./MVC-Calculator) | Swing Calculator following MVC Architecture | `CalculatorModel.java`, `CalculatorView.java`, `CalculatorController.java`, `Main.java` |
-| 📁 [`Servlet`](./Servlet) | Java Servlet Architecture (GET, POST, Session, Filter, Listener) | `HelloServlet.java`, `LoginServlet.java`, `AuthFilter.java`, `pom.xml` |
-| 📁 [`HTML-to-JSP`](./HTML-to-JSP) | Converting HTML Form to JSP with Expression Language (EL) | `student.jsp`, `result.jsp`, `HelloServlet.java` |
-| 📁 [`ShopSphere`](./ShopSphere) | **Major Java Project**: Complete E-Commerce Application | Full Project (`web/`, `swing-admin/`, `database/`, `network/`, `rmi/`) |
-
----
-
-## 🛠️ Overview of Programs
-
-### 1. Student-Registration-Form-Swing
-* **Description:** Interactive GUI registration form designed with Java Swing.
-* **Features:** Name, Roll Number, Gender radio buttons (`ButtonGroup`), Branch textfield, Terms checkbox, Submit/Reset buttons with validations.
-
-### 2. Basic-WebApps-Tomcat
-* **Description:** Basic HTML web application deployed on Apache Tomcat 11.
-* **URL:** `http://localhost:8080/mywebapps/index.html`
-
-### 3. JdbcProject
-* **Description:** Connects Java with MySQL using JDBC driver (`mysql-connector-j`).
-* **Features:** Creates connection with `DriverManager`, executes SQL queries with `PreparedStatement`, and retrieves results via `ResultSet`.
-
-### 4. Server-and-Client-Socket
-* **Description:** Client-Server networking application using TCP sockets over port 5000 (`java.net`).
-* **Flow:** `Server.java` listens on port 5000, `Client.java` connects and exchanges messages (`"Hello Server"` ➔ `"Hello Client"`).
-
-### 5. RMI
-* **Description:** Remote Method Invocation allowing client program to invoke methods on a remote server object.
-* **Files:** Remote Interface (`MyInterface`), Implementation (`MyRemote`), `Server` (binds to RMI registry), and `Client` (looks up and executes remote `add()` method).
-
-### 6. MVC-Calculator
-* **Description:** Desktop arithmetic calculator strictly separating concerns into Model, View, and Controller.
-* **Components:** 
-  * `Model`: Performs arithmetic operations (`+`, `-`, `*`, `/`).
-  * `View`: Swing GUI window (`JFrame`, inputs, buttons).
-  * `Controller`: Handles button clicks (`ActionListener`) and coordinates between View and Model.
-
-### 7. Servlet
-* **Description:** Web server controllers handling HTTP requests using Jakarta Servlet API.
-* **Topics:** GET/POST handling, Session management (`HttpSession`), Authentication Filters (`AuthFilter`), and Lifecycle Listeners.
-
-### 8. HTML-to-JSP
-* **Description:** Conversion of HTML form into JavaServer Pages (JSP).
-* **Flow:** `student.jsp` takes input ➔ `HelloServlet` sets request attributes ➔ `result.jsp` displays data using Expression Language (`${name}`, `${email}`, `${course}`, `${age}`).
+| 📁 [`Student-Registration-Form-Swing`](./Student-Registration-Form-Swing) | GUI Student Registration Form | Java Swing (`JFrame`, `JTextField`, `JRadioButton`, `ButtonGroup`, `JCheckBox`) |
+| 📁 [`Basic-WebApps-Tomcat`](./Basic-WebApps-Tomcat) | Basic Web Application Deployment | HTML5, Apache Tomcat Webapps (`index.html`) |
+| 📁 [`JdbcProject`](./JdbcProject) | Database Connectivity with MySQL | JDBC API, `DriverManager`, `PreparedStatement`, `mysql-connector-j` |
+| 📁 [`Server-and-Client-Socket`](./Server-and-Client-Socket) | TCP Socket Network Programming | `java.net.Socket`, `ServerSocket`, Port 5000 (`Server.java`, `Client.java`) |
+| 📁 [`RMI`](./RMI) | Remote Method Invocation | `java.rmi.*`, Remote Interface, `UnicastRemoteObject`, `rmiregistry` |
+| 📁 [`MVC-Calculator`](./MVC-Calculator) | Swing Calculator following MVC Architecture | Model-View-Controller, `ActionListener`, `CalculatorModel.java`, `CalculatorView.java` |
+| 📁 [`Servlet`](./Servlet) | Java Servlet Architecture & Lifecycle | Jakarta Servlet API, `HttpServlet`, Sessions (`HttpSession`), `AuthFilter`, Listeners |
+| 📁 [`HTML-to-JSP`](./HTML-to-JSP) | HTML Form to JSP with Expression Language | JSP Directives, Expression Language (`${name}`, `${email}`), MVC Dispatcher |
+| 📁 [`ShopSphere`](./ShopSphere) | **Major Java Project**: E-Commerce Platform | Multi-tier Architecture (`web/`, `swing-admin/`, `database/`, `network/`, `rmi/`) |
 
 ---
 
 ## 🚀 Major Project: ShopSphere
-* **Description:** Enterprise Java application with a web-based e-commerce platform and a desktop Swing-based admin management portal.
-* **Architecture:** Multi-tier Java architecture with relational database connectivity, distributed services, and networking.
+
+📁 **Directory:** [`ShopSphere`](./ShopSphere)  
+**ShopSphere** is a complete, multi-tiered Java enterprise application designed for modern e-commerce and retail management.
+
+### Project Architecture & Modules:
+* **`web/`**: Full customer shopping storefront and administrative web application built using **Jakarta Servlets**, **JSP**, **JSTL**, and **Custom Tags**.
+* **`swing-admin/`**: Desktop GUI management dashboard built using **Java Swing** for real-time inventory and catalog management.
+* **`database/`**: Relational MySQL schema (`shopsphere.sql`) defining products, users, categories, orders, carts, and reviews.
+* **`network/`**: TCP Client-Server communication module for remote status checking and server pinging.
+* **`rmi/`**: Remote Method Invocation services for remote inventory and price lookup across JVMs.
+* **`docs/`**: Complete system documentation, ER diagrams, use cases, architecture diagrams, and test suites.
 
 ---
 
-## 👨‍💻 Author & Submission Details
+## 🛠️ Detailed Lab Experiment Guide
+
+### 1. Student-Registration-Form-Swing
+* **Aim:** Design an interactive student registration window using Java Swing with comprehensive input validation.
+* **Key Components:** `JFrame`, `JLabel`, `JTextField`, `JRadioButton` with `ButtonGroup` for gender, `JCheckBox` for terms agreement, and validation alerts using `JOptionPane`.
+* **Execution:**
+  ```bash
+  cd Student-Registration-Form-Swing
+  javac StudentRegistration.java
+  java StudentRegistration
+  ```
+
+---
+
+### 2. Basic-WebApps-Tomcat
+* **Aim:** Deploy and host a standard web application on Apache Tomcat container.
+* **Structure:** Deployed under Tomcat's `webapps/` folder with proper HTML structure and UTF-8 encoding.
+* **Access URL:** `http://localhost:8080/mywebapps/index.html`
+
+---
+
+### 3. JdbcProject
+* **Aim:** Connect Java applications to a relational MySQL database to perform CRUD operations.
+* **Workflow:**
+  1. Load MySQL Driver: `Class.forName("com.mysql.cj.jdbc.Driver")`
+  2. Create Connection: `DriverManager.getConnection("jdbc:mysql://localhost:3306/college", "root", "password")`
+  3. Execute Query: `PreparedStatement ps = con.prepareStatement("insert into student values(?,?,?)")`
+  4. Iterate Results: `while(rs.next()) { ... }`
+
+---
+
+### 4. Server-and-Client-Socket
+* **Aim:** Implement bidirectional network communication using TCP sockets.
+* **Workflow:**
+  * `Server.java`: Initializes `ServerSocket(5000)`, waits on `accept()`, receives message, and returns acknowledgment.
+  * `Client.java`: Connects via `Socket("localhost", 5000)`, sends `"Hello Server"`, and prints server reply.
+* **Execution:**
+  ```bash
+  # Terminal 1:
+  java Server
+  # Terminal 2:
+  java Client
+  ```
+
+---
+
+### 5. RMI (Remote Method Invocation)
+* **Aim:** Enable a Java client running in one JVM to invoke methods of a remote object running in another JVM.
+* **Architecture:**
+  * Remote Interface: `MyInterface.java` extending `java.rmi.Remote`
+  * Remote Implementation: `MyRemote.java` extending `UnicastRemoteObject`
+  * Server: Binds service via `Naming.rebind("rmi://localhost/Add", obj)`
+  * Client: Finds service via `Naming.lookup("rmi://localhost/Add")` and invokes remote calculation.
+
+---
+
+### 6. MVC-Calculator
+* **Aim:** Build an arithmetic calculator strictly adhering to Model-View-Controller (MVC) architecture.
+* **Separation of Concerns:**
+  * **Model (`CalculatorModel.java`):** Contains arithmetic calculation methods (`add`, `subtract`, `multiply`, `divide`). Free from any GUI code.
+  * **View (`CalculatorView.java`):** Pure Swing GUI presentation (`JFrame`, buttons, labels, non-editable output).
+  * **Controller (`CalculatorController.java`):** Implements `ActionListener`, coordinates user clicks, retrieves data from View, invokes Model, and sets output on View.
+
+---
+
+### 7. Servlet Architecture
+* **Aim:** Master server-side web controllers, lifecycle handling, session tracking, and request filters.
+* **Topics Covered:**
+  * Lifecycle: `init()`, `service()`, and `destroy()` in `LifeCycleServlet.java`.
+  * Session Management: `HttpSession` for login authentication (`LoginServlet.java`) and logout invalidation (`LogoutServlet.java`).
+  * Interceptors: `AuthFilter.java` and `MyFilter.java` for route protection and access logging.
+  * Listeners: `AppListener.java` and `SessionListener.java` for application event monitoring.
+
+---
+
+### 8. HTML-to-JSP Conversion
+* **Aim:** Transition from static HTML presentation and Servlet `PrintWriter` rendering to clean MVC architecture using JSP and Expression Language.
+* **Workflow:**
+  * Form: `student.jsp` with `<%@ page contentType="text/html;charset=UTF-8" %>` page directive.
+  * Controller: `HelloServlet.java` extracts parameters via `request.getParameter()` and sets attributes using `request.setAttribute()`.
+  * View: `result.jsp` renders data dynamically via Expression Language (`${name}`, `${email}`, `${course}`, `${age}`).
+
+---
+
+## ⚙️ Technical Environment
+
+* **Java Development Kit:** JDK 17 / JDK 21+
+* **Build Tool:** Apache Maven 3.9+
+* **Application Server:** Apache Tomcat 11.x
+* **Database:** MySQL Server 8.x
+* **Editor / IDE:** VS Code / Eclipse / IntelliJ IDEA
+
+---
+
+## 👨‍💻 Author
+
 * **Student Name:** Harshit Ghiya
 * **GitHub Profile:** [@harshbki](https://github.com/harshbki)
-* **Google Form Link:** [Submit Repository](https://forms.gle/QPc4Ua1qK3FwrqTg9)
+* **Course:** Advanced Java Laboratory
