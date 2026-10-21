@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_1.xsd"
+         version="6.1" metadata-complete="false">
+    <display-name>ShopSphere</display-name>
+    <context-param>
+        <param-name>appName</param-name>
+        <param-value>ShopSphere</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>ServletConfigDemoServlet</servlet-name>
+        <servlet-class>com.shopsphere.controller.ServletConfigDemoServlet</servlet-class>
+        <init-param>
+            <param-name>demoValue</param-name>
+            <param-value>Configured per servlet</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletConfigDemoServlet</servlet-name>
+        <url-pattern>/syllabus/servlet-config</url-pattern>
+    </servlet-mapping>
+</web-app>

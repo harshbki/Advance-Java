@@ -1,0 +1,6 @@
+**/target/
+.maven-repository/
+**/.maven-repository/
+.idea/
+.vscode/
+*.iml

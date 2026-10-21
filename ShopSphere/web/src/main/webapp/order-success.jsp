@@ -1,0 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Order placed | ShopSphere</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"><link rel="stylesheet" href="${pageContext.request.contextPath}/css/shop.css"></head>
+<body><header class="topbar"><a class="brand" href="${pageContext.request.contextPath}/">ShopSphere</a><nav><a href="${pageContext.request.contextPath}/orders">My orders</a></nav></header><main class="auth-wrap"><section class="panel"><p class="eyebrow">ORDER CONFIRMED</p><h1>Thank you!</h1><p>Your order <strong>#<c:out value="${param.orderId}"/></strong> has been placed.</p><a class="button" href="${pageContext.request.contextPath}/products">Continue shopping</a></section></main></body></html>

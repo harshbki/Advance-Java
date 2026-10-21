@@ -1,0 +1,2 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Applet concept demonstration</title></head><body><h1>Java Applets: historical syllabus topic</h1><p>Applets were small Java programs embedded in web pages and ran inside a browser plugin. Modern browsers no longer support the plugin model, so ShopSphere does not depend on applets. This page records the historical concept for the RTU syllabus discussion.</p></body></html>

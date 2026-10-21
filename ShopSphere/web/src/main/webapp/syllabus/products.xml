@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <product><name>Sample notebook</name><price>120.00</price></product>
+    <product><name>Sample desk lamp</name><price>850.00</price></product>
+</catalog>
